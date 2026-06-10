@@ -167,6 +167,9 @@ const safeGlobalDict = {
     "Mark Agent commits as 'Made with Cursor'": "将智能体提交标记为 'Made with Cursor'",
     "PR Attribution": "PR 署名",
     "Mark pull requests as made with Cursor": "将拉取请求标记为使用 Cursor 制作",
+    "PR Preferences": "PR 偏好设置",
+    "Preferred PR destination": "首选 PR 打开位置",
+    "Choose where PR links open across web, the desktop app and IDE.": "选择 PR 链接在网页、桌面应用和 IDE 中的打开位置。",
 
     // ── Privacy ──
     "Privacy Mode": "隐私模式",
@@ -212,6 +215,8 @@ const safeGlobalDict = {
     "No hook executions yet": "暂无钩子执行记录",
 
     // ── Tools / Browser ──
+    "Open Browser": "打开浏览器",
+    "Configure Icon Visibility": "配置图标可见性",
     "Browser Automation": "浏览器自动化",
     "Browser automation disabled": "浏览器自动化已禁用",
     "Show Localhost Links in Browser": "在浏览器中显示 Localhost 链接",
@@ -245,6 +250,12 @@ const safeGlobalDict = {
     "No Hidden Dialogs Yet": "暂无隐藏的弹窗",
     "You haven't marked any dialogs as \"Don't ask again\". Any hidden dialogs will appear here to manage.": "您尚未将任何弹窗标记为“不再询问”。任何隐藏的弹窗都将显示在此处以供管理。",
     "You haven’t marked any dialogs as \"Don’t ask again\". Any hidden dialogs will appear here to manage.": "您尚未将任何弹窗标记为“不再询问”。任何隐藏的弹窗都将显示在此处以供管理。",
+
+    // ── Design Panel ──
+    "Drop shadow": "投影",
+    "Inner shadow": "内阴影",
+    "Layer Blur": "图层模糊",
+    "Backdrop Blur": "背景模糊",
 
     // ── 下面原本误放入了短词字典 ──
     "Submit with ": "使用 ",
@@ -341,7 +352,38 @@ const riskyShortWords = {
     "Cancel": "取消",
     "Confirm": "确认",
     "Hide": "隐藏",
-    "Edit": "编辑"
+    "Edit": "编辑",
+    "Flow": "流式布局",
+    "Design": "设计",
+    "Position": "位置",
+    "Dimensions": "尺寸",
+    "Alignment": "对齐",
+    "Gap": "间距",
+    "Padding": "内边距",
+    "Margin": "外边距",
+    "Appearance": "外观",
+    "Opacity": "不透明度",
+    "Text": "文本",
+    "Font": "字体",
+    "Color": "颜色",
+    "Solid": "纯色",
+    "Background": "背景",
+    "Border": "边框",
+    "Corner Radius": "圆角半径",
+    "Clip content": "裁剪内容",
+    "Border box": "边框盒",
+    "Line Height": "行高",
+    "Letter Spacing": "字距",
+    "Shadow & Blur": "阴影与模糊",
+    "Take Screenshot": "截图",
+    "Capture Area Screenshot": "区域截图",
+    "Hard Reload": "强制重新加载",
+    "Hard Reload Browser Tab": "强制重新加载浏览器标签页",
+    "Copy Current URL": "复制当前 URL",
+    "Zoom": "缩放",
+    "Clear Browsing History": "清除浏览历史",
+    "Clear Cookies": "清除 Cookie",
+    "Clear Cache": "清除缓存"
 };
 
 module.exports = { safeGlobalDict, riskyShortWords };

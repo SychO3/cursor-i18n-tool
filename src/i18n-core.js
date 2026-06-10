@@ -32,7 +32,7 @@ const longMegaRegex = longPattern ? new RegExp(`(${longPattern})`, 'g') : null;
 const uiProps = ['children', 'title', 'label', 'placeholder', 'description', 'tooltip', 'text'];
 const uiPropsPattern = uiProps.join('|');
 
-// 为每个危险短词预编译 3 种正则
+// 为每个危险短词预编译 4 种正则
 const riskyRegexes = Object.entries(riskyShortWords).map(([en, zh]) => {
     const escaped = escapeRegExp(en);
     return {
@@ -43,6 +43,8 @@ const riskyRegexes = Object.entries(riskyShortWords).map(([en, zh]) => {
         jsxRegex: new RegExp(`(null|}|\\w)\\s*,\\s*(["'\`])(${escaped})\\2\\s*(?=[,)])`, 'g'),
         // HTML 标签内文本: >General<
         htmlRegex: new RegExp(`>\\s*(${escaped})\\s*<`, 'g'),
+        // HTML 模板尾部文本: >General")
+        htmlTailRegex: new RegExp(`>\\s*(${escaped})(?=\\s*(["'\`]))`, 'g'),
     };
 });
 
@@ -367,11 +369,12 @@ function translate(paths) {
     // jsContent = jsContent.split('description:\'You haven\\u2019t marked any dialogs as "Don\\u2019t ask again". Any hidden dialogs will appear here to manage.\'').join('description:\'您尚未将任何弹窗标记为“不再询问”。任何隐藏的弹窗都将显示在此处以供管理。\'');
 
     // 6. 危险短词：精准 UI 属性替换
-    for (const { zh, propRegex, jsxRegex, htmlRegex } of riskyRegexes) {
+    for (const { zh, propRegex, jsxRegex, htmlRegex, htmlTailRegex } of riskyRegexes) {
         printJoke();
         jsContent = jsContent.replace(propRegex, `$1: $2${zh}$2`);
         jsContent = jsContent.replace(jsxRegex, `$1, $2${zh}$2`);
         jsContent = jsContent.replace(htmlRegex, `>${zh}<`);
+        jsContent = jsContent.replace(htmlTailRegex, `>${zh}`);
     }
 
     process.stdout.write('\n'); // 收尾换行
