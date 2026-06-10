@@ -240,7 +240,10 @@ const safeGlobalDict = {
 
     // ── Hooks ──
     "Hooks let you run custom scripts at specific points during the agent's execution to modify behavior, enforce policies, or add custom logging.": "钩子允许您在智能体执行的特定点运行自定义脚本，以修改行为、强制执行策略或添加自定义日志。",
+    "Configured Hooks": "已配置钩子",
+    "Configured Hooks (0)": "已配置钩子 (0)",
     "No hooks configured": "未配置钩子",
+    "Add a hooks.json file to your user, project, or enterprise config to start running custom scripts.": "将 hooks.json 文件添加到您的用户、项目或企业配置中，以开始运行自定义脚本。",
     "No hook executions yet": "暂无钩子执行记录",
 
     // ── Tools / Browser ──
@@ -248,6 +251,8 @@ const safeGlobalDict = {
     "Configure Icon Visibility": "配置图标可见性",
     "Browser Automation": "浏览器自动化",
     "Browser automation disabled": "浏览器自动化已禁用",
+    "Browser Tab": "浏览器标签页",
+    "Connected to Browser Tab": "已连接到浏览器标签页",
     "Show Localhost Links in Browser": "在浏览器中显示 Localhost 链接",
     "Automatically open localhost links in the Browser Tab": "自动在浏览器标签页中打开 localhost 链接",
 
