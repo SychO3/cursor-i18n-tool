@@ -41,6 +41,8 @@ const safeGlobalDict = {
     "Show system notifications when Agent completes or needs attention": "智能体完成任务或需要注意时显示系统通知",
     "System Tray Icon": "系统托盘图标",
     "Show Cursor in system tray": "在系统托盘显示 Cursor",
+    "Menu Bar Icon": "菜单栏图标",
+    "Show Cursor in menu bar": "在菜单栏中显示 Cursor",
     "Completion Sound": "完成提示音",
     "Play a sound when Agent finishes responding": "智能体完成响应时播放提示音",
     "Privacy": "隐私",
@@ -202,7 +204,11 @@ const safeGlobalDict = {
 
     // ── Privacy ──
     "Privacy Mode": "隐私模式",
+    "Privacy Mode (Legacy)": "隐私模式（旧版）",
     "Your code data will not be trained on or used to improve the product. Code may be stored to provide features such as Background Agent.": "您的代码数据不会被用于训练或改进产品。代码可能会被存储以提供后台智能体等功能。",
+    "Your code data will not be trained on or used to improve the product. We will not store your code.": "您的代码数据不会被用于训练或改进产品。我们不会存储您的代码。",
+    "Privacy Mode (Legacy) is enabled. Background Agent and some features not available.": "隐私模式（旧版）已启用。后台智能体和部分功能不可用。",
+    "Switch to Privacy Mode": "切换到隐私模式",
     "Data Sharing is controlled by the team admin. Configure here.": "数据共享由团队管理员控制。在此配置。",
 
     // ── Miscellaneous ──
