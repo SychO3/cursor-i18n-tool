@@ -423,6 +423,11 @@ function translate(paths) {
             // 攻克 21：Automatically index repositories to speed up Grep searches. All data is stored locally.
             regex: /"Automatically\s+index\s+repositories\s+to\s+speed\s+up\s+Grep\s+searches\.\s+All\s+data\s+is\s+stored\s+locally\."/gi,
             zh: '"自动索引代码库以加速 Grep 搜索。所有数据均存储在本地。"'
+        },
+        {
+            // 攻克 22：HTML 内嵌短文本 <div>Web Search Tool
+            regex: />Web Search Tool(?=["<)，])/g,
+            zh: '>网络搜索工具'
         }
     ];
 
